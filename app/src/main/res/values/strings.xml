@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">PicPay</string>
-    <string name="title">Contatos</string>
-    <string name="error">Ocorreu um erro. Tente novamente.</string>
+
+    <string name="users_title">Contatos</string>
+    <string name="users_error">Ocorreu um erro. Tente novamente.</string>
+    <string name="users_fallback_text">Não foi possível atualizar a lista de contatos</string>
 
 </resources>

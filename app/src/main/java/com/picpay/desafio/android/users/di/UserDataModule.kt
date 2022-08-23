@@ -1,5 +1,7 @@
 package com.picpay.desafio.android.users.di
 
+import com.picpay.desafio.android.users.data.datasource.UsersCacheDataSource
+import com.picpay.desafio.android.users.data.datasource.UsersLocalDataSource
 import com.picpay.desafio.android.users.data.datasource.UsersRemoteDataSource
 import com.picpay.desafio.android.users.data.datasource.UsersServiceDataSource
 import com.picpay.desafio.android.users.data.repository.UsersDefaultRepository
@@ -19,6 +21,12 @@ interface UserDataModule {
     fun bindsUsersRemoteDataSource(
         serviceDataSource: UsersServiceDataSource
     ): UsersRemoteDataSource
+
+    @Binds
+    @Reusable
+    fun bindsUsersLocalDataSource(
+        localDataSource: UsersCacheDataSource
+    ): UsersLocalDataSource
 
     @Binds
     @Reusable

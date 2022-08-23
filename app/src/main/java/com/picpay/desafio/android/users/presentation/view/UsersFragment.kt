@@ -50,7 +50,12 @@ class UsersFragment : Fragment() {
     }
 
     private fun showErrorMessage() {
-        val message = getString(R.string.error)
+        val message = getString(R.string.users_error)
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun showFallbackMessage() {
+        val message = getString(R.string.users_fallback_text)
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
     }
 
@@ -61,6 +66,7 @@ class UsersFragment : Fragment() {
         viewModel.viewState.action.observe(viewLifecycleOwner) { action ->
             when (action) {
                 UsersViewState.Action.ShowErrorMessage -> showErrorMessage()
+                UsersViewState.Action.ShowFallbackMessage -> showFallbackMessage()
             }
         }
     }
