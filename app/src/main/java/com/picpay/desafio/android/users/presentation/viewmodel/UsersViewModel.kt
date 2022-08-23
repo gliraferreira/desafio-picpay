@@ -36,7 +36,7 @@ class UsersViewModel @Inject constructor(
     private fun setFallbackState(fallbackUsers: List<User>) = with(viewState) {
         state.postValue(UsersViewState.State.SUCCESS)
         users.postValue(fallbackUsers)
-        action.postValue(UsersViewState.Action.ShowErrorMessage)
+        action.postValue(UsersViewState.Action.ShowFallbackMessage)
     }
 
     private fun setErrorState() = with(viewState) {

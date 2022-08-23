@@ -4,7 +4,7 @@ import com.picpay.desafio.android.users.domain.model.User
 
 interface UsersLocalDataSource {
 
-    fun saveUsers(users: List<User>)
+    suspend fun saveUsers(users: List<User>)
 
-    fun getUsers(): List<User>
+    suspend fun getUsers(): List<User>
 }
