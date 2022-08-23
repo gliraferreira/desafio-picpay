@@ -15,15 +15,12 @@ class UsersServiceDataSource @Inject constructor(
     private val userResponseMapper: UserResponseToModelMapper
 ) : UsersRemoteDataSource {
 
-    private val dispatcher: CoroutineDispatcher = Dispatchers.IO
-
     override suspend fun getUsers(): Result<List<User>, UserError> {
         return try {
                 val usersResult = usersApi.getUsers().map(userResponseMapper::mapFrom)
                 Result.Success(usersResult)
             } catch (exception: Exception) {
-                Result.Error(UserError)
+                Result.Error(UserError.GenericError)
             }
-
     }
 }

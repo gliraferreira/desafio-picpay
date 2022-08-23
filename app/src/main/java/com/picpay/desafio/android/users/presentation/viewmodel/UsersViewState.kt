@@ -21,5 +21,6 @@ class UsersViewState @Inject constructor() {
 
     sealed class Action {
         object ShowErrorMessage : Action()
+        object ShowFallbackMessage : Action()
     }
 }

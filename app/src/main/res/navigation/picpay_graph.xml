@@ -7,5 +7,5 @@
     <fragment
         android:id="@+id/usersFragment"
         android:name="com.picpay.desafio.android.users.presentation.view.UsersFragment"
-        android:label="@string/title" />
+        android:label="@string/users_title" />
 </navigation>
