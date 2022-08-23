@@ -10,12 +10,16 @@ class UsersViewState @Inject constructor() {
     val users = MutableLiveData<List<User>>()
 
     val state = MutableLiveData<State>()
+    val action = MutableLiveData<Action>()
 
     val isLoading = Transformations.map(state) { it == State.LOADING }
-    val isError = Transformations.map(state) { it == State.ERROR }
     val shouldDisplayContent = Transformations.map(state) { it == State.SUCCESS }
 
     enum class State {
         LOADING, SUCCESS, ERROR
+    }
+
+    sealed class Action {
+        object ShowErrorMessage : Action()
     }
 }

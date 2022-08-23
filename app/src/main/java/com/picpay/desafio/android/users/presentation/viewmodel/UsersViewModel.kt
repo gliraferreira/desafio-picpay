@@ -24,6 +24,7 @@ class UsersViewModel @Inject constructor(
                 }
                 .onError {
                     viewState.state.postValue(UsersViewState.State.ERROR)
+                    viewState.action.postValue(UsersViewState.Action.ShowErrorMessage)
                 }
         }
     }
