@@ -19,6 +19,7 @@ import kotlin.test.assertTrue
 
 @ExperimentalCoroutinesApi
 class UsersDefaultRepositoryTest {
+
     @get:Rule
     val rule = InstantTaskExecutorRule()
 

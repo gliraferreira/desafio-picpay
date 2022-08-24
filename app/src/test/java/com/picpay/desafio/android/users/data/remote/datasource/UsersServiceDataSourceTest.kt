@@ -1,13 +1,12 @@
 package com.picpay.desafio.android.users.data.remote.datasource
 
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.picpay.desafio.android.core.Result
-import com.picpay.desafio.android.testcore.MainDispatcherRule
 import com.picpay.desafio.android.testcore.factory.UserFactory.makeUser
 import com.picpay.desafio.android.testcore.factory.UserResponseFactory.makeUserResponse
 import com.picpay.desafio.android.users.data.remote.api.UsersApi
 import com.picpay.desafio.android.users.data.remote.api.response.UserResponse
 import com.picpay.desafio.android.users.data.remote.mapper.UserResponseToModelMapper
-import com.picpay.desafio.android.users.data.remote.datasource.UsersServiceDataSource
 import com.picpay.desafio.android.users.domain.model.UserError
 import io.mockk.coEvery
 import io.mockk.every
@@ -23,7 +22,7 @@ import kotlin.test.assertTrue
 class UsersServiceDataSourceTest {
 
     @get:Rule
-    val mainDispatcherRule = MainDispatcherRule()
+    val rule = InstantTaskExecutorRule()
 
     private val usersApi: UsersApi = mockk()
     private val userResponseMapper: UserResponseToModelMapper = mockk()

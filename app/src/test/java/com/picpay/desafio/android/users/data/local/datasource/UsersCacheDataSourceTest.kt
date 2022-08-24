@@ -1,6 +1,6 @@
 package com.picpay.desafio.android.users.data.local.datasource
 
-import com.picpay.desafio.android.testcore.MainDispatcherRule
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.picpay.desafio.android.testcore.factory.UserEntityFactory.makeUserEntity
 import com.picpay.desafio.android.testcore.factory.UserFactory.makeUser
 import com.picpay.desafio.android.users.data.local.database.UsersDao
@@ -18,7 +18,7 @@ import kotlin.test.assertEquals
 class UsersCacheDataSourceTest {
 
     @get:Rule
-    val mainDispatcherRule = MainDispatcherRule()
+    val rule = InstantTaskExecutorRule()
 
     private val usersDao: UsersDao = mockk()
     private val userModelToEntityMapper: UserModelToEntityMapper = mockk()
