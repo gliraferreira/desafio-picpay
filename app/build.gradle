@@ -48,6 +48,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
 
     implementation "androidx.core:core-ktx:$core_ktx_version"
     implementation "androidx.fragment:fragment-ktx:$fragment_ktx_version"
@@ -84,9 +85,8 @@ dependencies {
     implementation "de.hdodenhof:circleimageview:$circleimageview_version"
 
     testImplementation "junit:junit:$junit_version"
-    testImplementation "org.mockito:mockito-core:$mockito_version"
-    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockito_kotlin_version"
     testImplementation "androidx.arch.core:core-testing:$core_testing_version"
+    testImplementation "io.mockk:mockk:$mockk_version"
 
     androidTestImplementation "androidx.test:runner:$test_runner_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
