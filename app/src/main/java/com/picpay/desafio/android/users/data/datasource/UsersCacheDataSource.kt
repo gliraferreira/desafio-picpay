@@ -15,9 +15,7 @@ class UsersCacheDataSource @Inject constructor(
     override suspend fun saveUsers(users: List<User>) {
         users
             .map(userModelToEntityMapper::mapFrom)
-            .let { userEntities ->
-                usersDao.insertAll(userEntities)
-            }
+            .let { usersDao.insertAll(it) }
     }
 
     override suspend fun getUsers(): List<User> {
