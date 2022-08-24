@@ -1,13 +1,9 @@
-package com.picpay.desafio.android.users.data.datasource
+package com.picpay.desafio.android.users.data.remote.datasource
 
 import com.picpay.desafio.android.core.Result
-import com.picpay.desafio.android.users.data.api.UsersApi
-import com.picpay.desafio.android.users.data.mapper.UserResponseToModelMapper
+import com.picpay.desafio.android.users.data.remote.api.UsersApi
+import com.picpay.desafio.android.users.data.remote.mapper.UserResponseToModelMapper
 import com.picpay.desafio.android.users.domain.model.UserError
-import com.picpay.desafio.android.users.domain.model.User
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class UsersServiceDataSource @Inject constructor(

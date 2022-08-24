@@ -1,10 +1,10 @@
-package com.picpay.desafio.android.users.data.database
+package com.picpay.desafio.android.users.data.local.database
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.picpay.desafio.android.users.data.database.entity.UserEntity
+import com.picpay.desafio.android.users.data.local.database.entity.UserEntity
 
 @Dao
 interface UsersDao {

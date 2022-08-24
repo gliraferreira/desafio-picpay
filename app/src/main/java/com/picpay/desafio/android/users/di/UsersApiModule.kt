@@ -1,6 +1,6 @@
 package com.picpay.desafio.android.users.di
 
-import com.picpay.desafio.android.users.data.api.UsersApi
+import com.picpay.desafio.android.users.data.remote.api.UsersApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

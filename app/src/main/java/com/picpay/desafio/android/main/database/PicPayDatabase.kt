@@ -2,8 +2,8 @@ package com.picpay.desafio.android.main.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.picpay.desafio.android.users.data.database.UsersDao
-import com.picpay.desafio.android.users.data.database.entity.UserEntity
+import com.picpay.desafio.android.users.data.local.database.UsersDao
+import com.picpay.desafio.android.users.data.local.database.entity.UserEntity
 
 private const val DATABASE_VERSION = 1
 

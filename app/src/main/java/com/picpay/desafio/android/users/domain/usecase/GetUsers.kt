@@ -1,6 +1,6 @@
 package com.picpay.desafio.android.users.domain.usecase
 
-import com.picpay.desafio.android.users.data.repository.UsersRepository
+import com.picpay.desafio.android.users.domain.repository.UsersRepository
 import javax.inject.Inject
 
 class GetUsers @Inject constructor(

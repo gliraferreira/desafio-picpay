@@ -1,10 +1,11 @@
 package com.picpay.desafio.android.users.data.repository
 
 import com.picpay.desafio.android.core.Result
-import com.picpay.desafio.android.users.data.datasource.UsersLocalDataSource
-import com.picpay.desafio.android.users.data.datasource.UsersRemoteDataSource
+import com.picpay.desafio.android.users.data.local.datasource.UsersLocalDataSource
+import com.picpay.desafio.android.users.data.remote.datasource.UsersRemoteDataSource
 import com.picpay.desafio.android.users.domain.model.UserError
 import com.picpay.desafio.android.users.domain.model.User
+import com.picpay.desafio.android.users.domain.repository.UsersRepository
 import javax.inject.Inject
 
 class UsersDefaultRepository @Inject constructor(

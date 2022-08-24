@@ -1,8 +1,8 @@
-package com.picpay.desafio.android.users.data.datasource
+package com.picpay.desafio.android.users.data.local.datasource
 
-import com.picpay.desafio.android.users.data.database.UsersDao
-import com.picpay.desafio.android.users.data.mapper.UserEntityToModelMapper
-import com.picpay.desafio.android.users.data.mapper.UserModelToEntityMapper
+import com.picpay.desafio.android.users.data.local.database.UsersDao
+import com.picpay.desafio.android.users.data.local.mapper.UserEntityToModelMapper
+import com.picpay.desafio.android.users.data.local.mapper.UserModelToEntityMapper
 import com.picpay.desafio.android.users.domain.model.User
 import javax.inject.Inject
 

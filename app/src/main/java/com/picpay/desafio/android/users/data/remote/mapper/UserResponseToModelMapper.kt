@@ -1,6 +1,6 @@
-package com.picpay.desafio.android.users.data.mapper
+package com.picpay.desafio.android.users.data.remote.mapper
 
-import com.picpay.desafio.android.users.data.api.response.UserResponse
+import com.picpay.desafio.android.users.data.remote.api.response.UserResponse
 import com.picpay.desafio.android.users.domain.model.User
 import javax.inject.Inject
 

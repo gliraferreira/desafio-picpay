@@ -1,10 +1,13 @@
-package com.picpay.desafio.android.users.data.datasource
+package com.picpay.desafio.android.users.data.remote.datasource
 
 import com.picpay.desafio.android.core.Result
 import com.picpay.desafio.android.testcore.MainDispatcherRule
-import com.picpay.desafio.android.users.data.api.UsersApi
-import com.picpay.desafio.android.users.data.api.response.UserResponse
-import com.picpay.desafio.android.users.data.mapper.UserResponseToModelMapper
+import com.picpay.desafio.android.testcore.factory.UserFactory.makeUser
+import com.picpay.desafio.android.testcore.factory.UserResponseFactory.makeUserResponse
+import com.picpay.desafio.android.users.data.remote.api.UsersApi
+import com.picpay.desafio.android.users.data.remote.api.response.UserResponse
+import com.picpay.desafio.android.users.data.remote.mapper.UserResponseToModelMapper
+import com.picpay.desafio.android.users.data.remote.datasource.UsersServiceDataSource
 import com.picpay.desafio.android.users.domain.model.UserError
 import io.mockk.coEvery
 import io.mockk.every
@@ -31,10 +34,10 @@ class UsersServiceDataSourceTest {
 
     @Test
     fun getUsers_withSuccessResult_returnSuccess() = runTest {
-        val response = listOf<UserResponse>(
-            mockk(),
-            mockk(),
-            mockk()
+        val response = listOf(
+            makeUserResponse(),
+            makeUserResponse(),
+            makeUserResponse()
         )
         prepareScenario(
             isSuccessScenario = true,
@@ -48,10 +51,10 @@ class UsersServiceDataSourceTest {
 
     @Test
     fun getUsers_withSuccessResult_returnSameListFromResponse() = runTest {
-        val response = listOf<UserResponse>(
-            mockk(),
-            mockk(),
-            mockk()
+        val response = listOf(
+            makeUserResponse(),
+            makeUserResponse(),
+            makeUserResponse()
         )
         prepareScenario(
             isSuccessScenario = true,
@@ -79,10 +82,10 @@ class UsersServiceDataSourceTest {
 
     private fun prepareScenario(
         isSuccessScenario: Boolean = false,
-        usersResponse: List<UserResponse> = emptyList(),
+        usersResponse: List<UserResponse> = listOf(makeUserResponse()),
         exception: Exception = Exception()
     ) {
-        every { userResponseMapper.mapFrom(any()) } returns mockk()
+        every { userResponseMapper.mapFrom(any()) } returns makeUser()
 
         if (isSuccessScenario) {
             coEvery { usersApi.getUsers() } returns usersResponse

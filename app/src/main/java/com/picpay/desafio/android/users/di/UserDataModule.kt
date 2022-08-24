@@ -1,11 +1,11 @@
 package com.picpay.desafio.android.users.di
 
-import com.picpay.desafio.android.users.data.datasource.UsersCacheDataSource
-import com.picpay.desafio.android.users.data.datasource.UsersLocalDataSource
-import com.picpay.desafio.android.users.data.datasource.UsersRemoteDataSource
-import com.picpay.desafio.android.users.data.datasource.UsersServiceDataSource
+import com.picpay.desafio.android.users.data.local.datasource.UsersCacheDataSource
+import com.picpay.desafio.android.users.data.local.datasource.UsersLocalDataSource
+import com.picpay.desafio.android.users.data.remote.datasource.UsersRemoteDataSource
+import com.picpay.desafio.android.users.data.remote.datasource.UsersServiceDataSource
 import com.picpay.desafio.android.users.data.repository.UsersDefaultRepository
-import com.picpay.desafio.android.users.data.repository.UsersRepository
+import com.picpay.desafio.android.users.domain.repository.UsersRepository
 import dagger.Binds
 import dagger.Module
 import dagger.Reusable

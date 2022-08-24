@@ -1,7 +1,7 @@
 package com.picpay.desafio.android.users.di
 
 import com.picpay.desafio.android.main.database.PicPayDatabase
-import com.picpay.desafio.android.users.data.database.UsersDao
+import com.picpay.desafio.android.users.data.local.database.UsersDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
